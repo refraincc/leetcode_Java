@@ -1,61 +1,75 @@
 package offer;
 
+import java.util.Iterator;
+import java.util.function.IntPredicate;
+
+import javax.sound.midi.MidiChannel;
+
 public class offer_04 {
 
 	static public boolean findNumberIn2DArray(int[][] matrix, int target) {
 		
-		if (matrix.length == 0) {
-			return false;
-		}
+		int i = matrix.length - 1;
+		int j = 0;
 		
-		int i = 0;
-		int length = matrix.length;
-		
-		while (i < length) {
-			if (matrix[i].length == 0) {
-				i++;
-				continue;
-			}
-			i++;
-			int middle = length >> 1 + 1;
-			int subArrayFirstObject = matrix[middle][0];
-			if (subArrayFirstObject < target) {
-				length = middle + middle / 2;
-			}else if (target < subArrayFirstObject) {
-				length = middle - middle / 2;
+		while (i >= 0 && j < matrix[0].length) {
+			
+			if (target < matrix[i][j]) {
+				i--;
+			}else if (target > matrix[i][j]) {
+				j++;
 			}else {
 				return true;
 			}
-			int j = 0;
-			int subLength = matrix[i].length; 
-			while (j < subLength) {
-				j++;
-				int subMiddle = subLength >> 1 + 1;
-				int subObject = matrix[middle][subMiddle];
+		}
+		
+		return false;
+		
+    }
+	
+	
+	static public boolean findNumberIn2DArray2(int[][] matrix, int target) {
+		if (matrix.length == 0 || matrix == null || matrix[0].length == 0) {
+			return false;
+		}
+		
+		for (int i = 0; i < matrix.length; i++) {
+
+			int[] subArray = matrix[i];
+			int subCount = subArray.length - 1;
+			if (subArray[0] > target ||  subArray[subCount] < target) {
+				continue;
+			}
+			
+			int low = 0;
+			int hig = subArray.length - 1;
+			while (low <= hig) {
 				
-				if (subObject < target) {
-					subLength = subMiddle + subMiddle / 2;
-				}else if (target < subObject) {
-					subLength = subMiddle - subMiddle / 2;
+				int mid = (hig + low) >> 1;
+			
+				System.out.println(low + "," + mid + "," + hig );
+				
+				if (subArray[mid] < target) {
+					low = mid + 1;
+				}else if (target < subArray[mid]) {
+					hig = mid - 1;
 				}else {
 					return true;
 				}
-				
 			}
 			
 		}
 		
-		
 		return false;
-    }
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("solution start");
 		
-		int[][] array = new int[][] {{1,  4,  7, 11, 15},{2,   5,  8, 12, 19}, {3,   6,  9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
+		int[][] array = new int[][] {{1,  4,  7, 11, 15},{2, 5,  8, 12, 19}, {3,   6,  9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}};
 //		int[][] array = new int[][] {{}};
-		boolean number = findNumberIn2DArray(array, 7);
+		boolean number = findNumberIn2DArray2(array, 20);
 		
 		System.out.println(number);
 		
