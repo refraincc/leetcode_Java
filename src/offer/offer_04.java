@@ -2,7 +2,6 @@ package offer;
 
 import java.util.Iterator;
 import java.util.function.IntPredicate;
-
 import javax.sound.midi.MidiChannel;
 
 public class offer_04 {
