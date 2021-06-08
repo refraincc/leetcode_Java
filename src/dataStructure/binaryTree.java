@@ -1,4 +1,4 @@
-package tree;
+package dataStructure;
 
 import java.util.function.Function;
 import resource.ListNode;
