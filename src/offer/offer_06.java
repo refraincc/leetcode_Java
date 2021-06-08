@@ -5,6 +5,10 @@ import java.util.function.IntPredicate;
 
 import resource.*;
 
+/*
+ * https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
+ * */
+
 public class offer_06 {
 	
 	static public int[] reversePrint(ListNode head) {

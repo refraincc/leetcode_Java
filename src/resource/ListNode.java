@@ -1,14 +1,24 @@
 package resource;
 
+import java.util.List;
+
 public class ListNode {
 	public int val = 0;
 	public ListNode next = null;
+	public ListNode left = null;
+	public ListNode right = null;
 	public ListNode(int x) {
 		val = x;
 	}
 	public ListNode(int val, ListNode next) {
 		this.val = val;
 		this.next = next;
+	}
+
+	public ListNode(int val, ListNode left, ListNode right) {
+		this.val = val;
+		this.left = left;
+		this.right = right;
 	}
 	
 	@Override
