@@ -4,63 +4,61 @@ import java.lang.reflect.Array;
 import java.util.Iterator;
 
 public class offer_03 {
-	/// Ô­Êý×é²Ù×÷
-	  static public int findRepeatNumber(int[] nums) {
+	/// Ô­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	static public int findRepeatNumber(int[] nums) {
 
-	    	if (nums.length == 0) return -1;
-	    	
-	    	for (int i = 0; i < nums.length; i++) {
-	    		
-	    		if (nums[i] == nums[nums[i]] && nums[i] != i) {
-					return nums[i];
-				}
-	    		
-	    		int temp = nums[nums[i]];
-	    		nums[nums[i]] = nums[i];
-	    		nums[i] = temp;
-	    		
+		if (nums.length == 0)
+			return -1;
+
+		for (int i = 0; i < nums.length; i++) {
+
+			if (nums[i] == nums[nums[i]] && nums[i] != i) {
+				return nums[i];
 			}
 
-	    	return -1;
-	    	
-	    }
-	
-	  /// ´´½¨È«ÐÂµÄÊý×é
-	  public int solution(int[] nums) {
+			int temp = nums[nums[i]];
+			nums[nums[i]] = nums[i];
+			nums[i] = temp;
 
-	    	int[] array = new int[nums.length];
-	    	
-	    	for (int i = 0; i < array.length; i++) {
-				array[i] = -1;
+		}
+
+		return -1;
+
+	}
+
+	/// ï¿½ï¿½ï¿½ï¿½È«ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½
+	public int solution(int[] nums) {
+
+		int[] array = new int[nums.length];
+
+		for (int i = 0; i < array.length; i++) {
+			array[i] = -1;
+		}
+
+		for (int i = 0; i < nums.length; i++) {
+			if (array[nums[i]] == nums[i]) {
+				return nums[i];
+			} else {
+				array[nums[i]] = nums[i];
 			}
-	    	
-	    	for (int i = 0; i < nums.length; i++) {
-				if (array[nums[i]] == nums[i]) {
-					return nums[i];
-				}else {
-					array[nums[i]] = nums[i];
-				}
-			}
-	    	
-	    	return -1;
-	    	
-	  }
-	  
+		}
+
+		return -1;
+
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		System.out.println("solution start");
-		
-		int[] array = new int[] {0, 1, 2, 3, 4, 11, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-		
+
+		int[] array = new int[] { 0, 1, 2, 3, 4, 11, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+
 		int number = findRepeatNumber(array);
-		
+
 		System.out.println(number);
-		
+
 		System.out.println("solution end");
 	}
 
-	
-	
-	
 }

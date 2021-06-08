@@ -2,32 +2,30 @@ package offer;
 
 /*
  * https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/
- * ÇëÊµÏÖÒ»¸öº¯Êý£¬°Ñ×Ö·û´® s ÖÐµÄÃ¿¸ö¿Õ¸ñÌæ»»³É"%20"¡£
- * Ê¾Àý 1£º
-	ÊäÈë£ºs = "We are happy."
-	Êä³ö£º"We%20are%20happy."
+ * ï¿½ï¿½Êµï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ s ï¿½Ðµï¿½Ã¿ï¿½ï¿½ï¿½Õ¸ï¿½ï¿½æ»»ï¿½ï¿½"%20"ï¿½ï¿½
+ * Ê¾ï¿½ï¿½ 1ï¿½ï¿½
+	ï¿½ï¿½ï¿½ë£ºs = "We are happy."
+	ï¿½ï¿½ï¿½ï¿½ï¿½"We%20are%20happy."
  * */
 public class offer_05 {
-	
+
 	static public String replaceSpace(String s) {
 
 		StringBuffer stringBuffer = new StringBuffer();
-		
+
 		for (int i = 0; i < s.length(); i++) {
-			
+
 			if (s.charAt(i) == ' ') {
 				stringBuffer.append("%20");
-			}else {
+			} else {
 				stringBuffer.append(s.charAt(i));
 			}
-			
-			
+
 		}
-		
+
 		return stringBuffer.toString();
-		
+
 	}
-	
 
 	public static void main(String[] args) {
 
