@@ -20,7 +20,23 @@ public class ListNode {
 		this.left = left;
 		this.right = right;
 	}
-	
+
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+
+		StringBuffer stringBuffer = new StringBuffer();
+
+		if (this != null) {
+			stringBuffer.append(this.val);
+		}
+
+		return super.toString();
+	}
+
+
+	/*
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
@@ -37,6 +53,6 @@ public class ListNode {
 		stringBuffer.append("val = " + node.val + "   next = null");
 		
 		return stringBuffer.toString();
-	}
+	}*/
 	
 }
