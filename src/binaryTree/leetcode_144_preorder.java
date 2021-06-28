@@ -5,17 +5,16 @@ import resource.TreeNode;
 import java.util.List;
 import java.util.Stack;
 
-
 /**
  * 144
  */
-public class Solution {
+public class leetcode_94_inorder {
 
-        
-    //  Definition for a binary tree node.
+    // Definition for a binary tree node.
     static public List<Integer> preorderTraversal(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<Integer>();
-        if (root == null) return list;
+        if (root == null)
+            return list;
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
         stack.push(root);
@@ -29,7 +28,7 @@ public class Solution {
                 stack.push(root.right);
             }
 
-            if (root.left != null){
+            if (root.left != null) {
                 stack.push(root.left);
             }
 
@@ -37,13 +36,8 @@ public class Solution {
         return list;
     }
 
-
-
     public static void main(String[] args) {
-        
-        
-        
+
     }
 
 }
-
