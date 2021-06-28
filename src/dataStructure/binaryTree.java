@@ -1,12 +1,15 @@
 package dataStructure;
 
+import java.util.Stack;
 import java.util.function.Function;
 import resource.ListNode;
 
 /**
  * binaryTree
  * 
- * 10 6 14 4 8 12 16
+ *          10 
+ *     6         14 
+ *  4    8   12     16
  * 
  * 
  */
@@ -23,6 +26,29 @@ public class binaryTree {
         preoderPrint(head.left);
         preoderPrint(head.right);
 
+    }
+
+    static void preoderPrint_loop(ListNode head) {
+
+        if (head == null) return;
+
+        Stack<ListNode> stack = new Stack<ListNode>();
+        stack.push(head);
+
+        while (!stack.isEmpty()) {
+            head = stack.pop();
+
+            System.out.println(head.val);
+
+            if (head.right != null) {
+                stack.push(head.right);
+            }
+
+            if (head.left != null){
+                stack.push(head.left);
+            }
+
+        }
     }
 
     // 中序遍历 4,6,8,10,12,14,16
@@ -53,7 +79,8 @@ public class binaryTree {
         ListNode node1 = new ListNode(10, node2, node3);
 
         // preoderPrint(node1);
-        inorderPrint(node1);
+        preoderPrint_loop(node1);
+        // inorderPrint(node1);
 
         System.out.println("End");
 
