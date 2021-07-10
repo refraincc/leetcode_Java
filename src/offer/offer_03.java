@@ -27,7 +27,7 @@ public class offer_03 {
 	}
 
 	/// ����ȫ�µ�����
-	public int solution(int[] nums) {
+	public int findRepeatNumber2(int[] nums) {
 
 		int[] array = new int[nums.length];
 
