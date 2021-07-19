@@ -30,26 +30,40 @@ import resource.TreeNode;
 class offer_07 {
 
     static public TreeNode buildTree(int[] preorder, int[] inorder) {
-        
         if (preorder == null || inorder == null || preorder.length == 0 || inorder.length == 0){
             return null;
         }
 
-
-
-        return buildTreeCore(preorder, inorder, 0, 0);
+        return buildTreeCore(preorder, 0, preorder.length, inorder, 0, inorder.length);
     }
 
 
-    static public TreeNode buildTreeCore(int[] preorder, int[] inorder, int startPreorderIdx, int startInorderIdx){
+    static public TreeNode buildTreeCore(int[] preorder,int p_left, int p_right, int[] inorder,  int i_left, int i_right){
+
+        if (p_left >= p_right || i_left >= i_right) {
+            return null;
+        }
 
         
-        TreeNode root = new TreeNode(startPreorderIdx);
-        startPreorderIdx++;
+        TreeNode root = new TreeNode(preorder[p_left]);
 
-        
+        int i_rootIdx = 0;
+        for (int i = 0; i < inorder.length; i++) {
+
+            if (inorder[i] == root.val) {
+                i_rootIdx = i;
+                break;
+            }
+ 
+        }
+
+        int leftNum = i_rootIdx - i_left;
+
+        root.left = buildTreeCore(preorder, p_left + 1, p_left + 1 + leftNum, inorder, i_left, i_rootIdx);
+        root.right = buildTreeCore(preorder, p_left + 1 + leftNum, p_right, inorder, i_rootIdx + 1, i_right);
 
         return root;
+        
     }
 
 
