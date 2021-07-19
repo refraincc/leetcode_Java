@@ -17,6 +17,10 @@ import resource.TreeNode;
  */
 public class binaryTree {
 
+    int size;
+    
+
+
     // 前序遍历 10,6,4,8,14,12,16 根节点最先打印
     static void preoderPrint(TreeNode root) {
 
