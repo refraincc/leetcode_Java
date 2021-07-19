@@ -6,6 +6,7 @@ import java.util.Stack;
 import java.util.function.Function;
 
 import Resource.TreeNode;
+import Resource.Visitor;
 
 /**
  * binaryTree
@@ -16,10 +17,27 @@ import Resource.TreeNode;
  * 
  * 
  */
-public class BinaryTree {
+public class BinaryTree<E> {
 
     protected int size;
-    protected TreeNode root;
+    protected TreeNode<E> root;
+
+    public int size() {
+        return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public void clear() {
+        root = null;
+        size = 0;
+    }
+
+    public void preorder(Visitor<E> visitor) {
+        
+    }
 
 
     // 前序遍历 10,6,4,8,14,12,16 根节点最先打印
