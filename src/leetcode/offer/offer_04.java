@@ -1,4 +1,4 @@
-package offer;
+package Leetcode.Offer;
 
 import java.util.Iterator;
 import java.util.function.IntPredicate;

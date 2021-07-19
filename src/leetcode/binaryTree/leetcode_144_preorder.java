@@ -1,9 +1,10 @@
-package binaryTree;
+package Leetcode.BinaryTree;
 
 import java.util.ArrayList;
-import resource.TreeNode;
 import java.util.List;
 import java.util.Stack;
+
+import Resource.TreeNode;
 
 /**
  * 144

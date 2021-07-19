@@ -1,4 +1,4 @@
-package offer;
+package Leetcode.Offer;
 
 import java.lang.reflect.Array;
 import java.util.Iterator;

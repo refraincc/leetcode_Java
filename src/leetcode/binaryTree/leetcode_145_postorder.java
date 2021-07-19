@@ -1,9 +1,9 @@
-package binaryTree;
+package Leetcode.BinaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import resource.TreeNode;
+import Resource.TreeNode;
 
 
 

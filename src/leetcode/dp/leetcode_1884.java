@@ -1,6 +1,6 @@
 
 
-package leetcode.dp;
+package Leetcode.dp;
 
 /**
  * leetcode_1884

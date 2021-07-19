@@ -1,9 +1,9 @@
-package offer;
+package Leetcode.Offer;
 
 import java.util.ArrayList;
 import java.util.function.IntPredicate;
 
-import resource.*;
+import Resource.*;
 
 /*
  * https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/

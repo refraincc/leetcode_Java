@@ -1,10 +1,11 @@
-package dataStructure;
+package DataStructure.BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.function.Function;
-import resource.TreeNode;
+
+import Resource.TreeNode;
 
 /**
  * binaryTree
@@ -15,10 +16,10 @@ import resource.TreeNode;
  * 
  * 
  */
-public class binaryTree {
+public class BinaryTree {
 
-    int size;
-    
+    protected int size;
+    protected TreeNode root;
 
 
     // 前序遍历 10,6,4,8,14,12,16 根节点最先打印

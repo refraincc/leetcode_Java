@@ -1,12 +1,12 @@
-package binaryTree;
+package Leetcode.BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 import javax.management.Query;
 
+import Resource.TreeNode;
 import jdk.nashorn.api.tree.Tree;
-import resource.TreeNode;
 
 public class leetcode_226_invertTree {
     

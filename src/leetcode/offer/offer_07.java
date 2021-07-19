@@ -1,8 +1,8 @@
-package offer;
+package Leetcode.Offer;
 
 import java.lang.reflect.Array;
 
-import resource.TreeNode;
+import Resource.TreeNode;
 /*
     https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/
     https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/

@@ -1,4 +1,4 @@
-package resource;
+package Resource;
 
 public class TreeNode {
     public int val;
