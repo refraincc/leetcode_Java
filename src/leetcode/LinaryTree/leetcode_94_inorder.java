@@ -1,10 +1,10 @@
-package Leetcode.BinaryTree;
-
-import resource.TreeNode;
+package Leetcode.LinaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+
+import Resource.TreeNode;
 
 public class leetcode_94_inorder {
     

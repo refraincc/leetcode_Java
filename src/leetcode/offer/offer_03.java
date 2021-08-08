@@ -1,10 +1,9 @@
-package Leetcode.Offer;
+package Leetcode.offer;
 
 import java.lang.reflect.Array;
 import java.util.Iterator;
 
 public class offer_03 {
-	/// ԭ�������
 	static public int findRepeatNumber(int[] nums) {
 
 		if (nums.length == 0)
@@ -26,7 +25,6 @@ public class offer_03 {
 
 	}
 
-	/// ����ȫ�µ�����
 	public int findRepeatNumber2(int[] nums) {
 
 		int[] array = new int[nums.length];

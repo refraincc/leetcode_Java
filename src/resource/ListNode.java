@@ -22,6 +22,10 @@ public class ListNode {
 	}
 
 
+	public void add(ListNode node) {
+		this.next = node;
+	}
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub

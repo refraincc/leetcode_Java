@@ -1,4 +1,4 @@
-package Leetcode.Offer;
+package Leetcode.offer;
 
 import java.lang.reflect.Array;
 
