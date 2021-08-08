@@ -2,20 +2,20 @@ package Resource;
 
 import java.util.List;
 
-public class ListNode {
-	public int val = 0;
+public class ListNode<E> {
+	public E val;
 	public ListNode next = null;
 	public ListNode left = null;
 	public ListNode right = null;
-	public ListNode(int x) {
+	public ListNode(E x) {
 		val = x;
 	}
-	public ListNode(int val, ListNode next) {
+	public ListNode(E val, ListNode next) {
 		this.val = val;
 		this.next = next;
 	}
 
-	public ListNode(int val, ListNode left, ListNode right) {
+	public ListNode(E val, ListNode left, ListNode right) {
 		this.val = val;
 		this.left = left;
 		this.right = right;
@@ -39,24 +39,26 @@ public class ListNode {
 		return super.toString();
 	}
 
-
-	/*
 	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		
-		StringBuffer stringBuffer = new StringBuffer();
-		
-		ListNode node = this;
-		
-		while (node.next != null) {
-			stringBuffer.append("val = " + node.val + "   next = " + node.next.val + "\n");
-			node = node.next;
+		public String toString() {
+			StringBuilder sb = new StringBuilder();
+			
+			if (prev != null) {
+				sb.append(prev.val);
+			} else {
+				sb.append("null");
+			}
+			
+			sb.append("_").append(val).append("_");
+
+			if (next != null) {
+				sb.append(next.val);
+			} else {
+				sb.append("null");
+			}
+			
+			return sb.toString();
 		}
-		
-		stringBuffer.append("val = " + node.val + "   next = null");
-		
-		return stringBuffer.toString();
-	}*/
+	
 	
 }
