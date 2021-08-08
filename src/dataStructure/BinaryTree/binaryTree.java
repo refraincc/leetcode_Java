@@ -1,9 +1,9 @@
 package DataStructure.BinaryTree;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-import java.util.function.Function;
+import java.util.*;
+// import java.util.Queue;
+// import java.util.Stack;
+// import java.util.function.Function;
 
 import Resource.TreeNode;
 import Resource.Visitor;
@@ -35,7 +35,7 @@ public class BinaryTree<E> {
         size = 0;
     }
 
-    public void preorder(Visitor<E> visitor) {
+    public void preorder(Visitor visitor) {
         
     }
 

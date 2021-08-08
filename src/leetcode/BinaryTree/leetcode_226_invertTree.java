@@ -1,12 +1,9 @@
-package Leetcode.LinaryTree;
+package Leetcode.BinaryTree;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
-import javax.management.Query;
 
 import Resource.TreeNode;
-import jdk.nashorn.api.tree.Tree;
 
 public class leetcode_226_invertTree {
     
@@ -14,7 +11,7 @@ public class leetcode_226_invertTree {
         if (root == null) return root;
 
 
-
+        return null;
 
     }
 

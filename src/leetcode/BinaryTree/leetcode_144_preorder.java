@@ -1,15 +1,13 @@
-package Leetcode.LinaryTree;
+package Leetcode.BinaryTree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 import Resource.TreeNode;
 
 /**
  * 144
  */
-public class leetcode_94_inorder {
+public class leetcode_144_preorder {
 
     // Definition for a binary tree node.
     static public List<Integer> preorderTraversal(TreeNode root) {

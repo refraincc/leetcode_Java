@@ -1,7 +1,7 @@
 package Leetcode.offer;
 
-import java.lang.reflect.Array;
-import java.util.Iterator;
+// import java.lang.reflect.Array;
+// import java.util.Iterator;
 
 public class offer_03 {
 	static public int findRepeatNumber(int[] nums) {

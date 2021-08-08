@@ -1,6 +1,10 @@
 package Resource;
 
-public abstract class Visitor {
+
+import java.util.*;
+
+
+public abstract class Visitor<E> {
     boolean stop;
 
     abstract boolean visit(E emement);
