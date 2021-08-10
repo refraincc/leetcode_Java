@@ -1,6 +1,7 @@
 package DataStructure.BinaryTree;
 
 
+import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 // import java.util.function.Function;
@@ -23,6 +24,8 @@ public class BinaryTree<E> {
     protected TreeNode<E> root;
 
     public int size() {
+
+
         return size;
     }
 

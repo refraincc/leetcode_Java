@@ -3,7 +3,7 @@ package Leetcode.offer;
 import java.util.ArrayList;
 import java.util.function.IntPredicate;
 
-import Resource.*;
+import Resource.ListNode;
 
 /*
  * https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
@@ -12,6 +12,8 @@ import Resource.*;
 public class offer_06 {
 
 	static public int[] reversePrint(ListNode head) {
+
+
 
 		ListNode curr = head; // 6, 5, 4, 3, 2, 1, null
 		ListNode next = null; // 1, 2, 3, 4, 5, 6, null
@@ -34,7 +36,7 @@ public class offer_06 {
 		int[] array = new int[i];
 		int j = 0;
 		while (node != null) {
-			array[j] = node.val;
+			// array[j] = node.val;
 			j++;
 			node = node.next;
 		}

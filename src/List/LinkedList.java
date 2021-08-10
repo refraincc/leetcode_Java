@@ -68,7 +68,7 @@ public class LinkedList<E> extends AbstractList<E> {
         } else {
             ListNode<E> prev = node(index - 1);
             node = prev.next;
-            prev.nex = node.next;
+            prev.next = node.next;
         }
         size--;
         return node.val;
