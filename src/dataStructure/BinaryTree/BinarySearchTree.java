@@ -3,7 +3,7 @@ package DataStructure.BinaryTree;
 import Resource.TreeNode;
 import java.util.Comparator;
 
-public class BinarySearchTree<E> extends BinaryTree{
+public class BinarySearchTree<E> extends BinaryTree<E>{
     
     private Comparator<E> comparator;
 

@@ -2,7 +2,7 @@ package DataStructure.BinaryTree;
 
 
 
-public class AVLTree extends BinarySearchTree{
+public class AVLTree<E> extends BinarySearchTree<E>{
     public static void main(String[] args) {
         
     }

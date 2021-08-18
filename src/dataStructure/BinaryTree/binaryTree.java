@@ -1,6 +1,5 @@
 package DataStructure.BinaryTree;
 
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -12,9 +11,7 @@ import Resource.Visitor;
 /**
  * binaryTree
  * 
- *          10 
- *     6         14 
- *  4    8   12     16
+ * 10 6 14 4 8 12 16
  * 
  * 
  */
@@ -24,7 +21,6 @@ public class BinaryTree<E> {
     protected TreeNode<E> root;
 
     public int size() {
-
 
         return size;
     }
@@ -39,12 +35,11 @@ public class BinaryTree<E> {
     }
 
     public void preorder(Visitor<E> visitor) {
-        
+
     }
 
-
     // 前序遍历 10,6,4,8,14,12,16 根节点最先打印
-    static void preoderPrint(TreeNode<E> root) {
+    void preoderPrint(TreeNode<E> root) {
 
         if (root == null)
             return;
@@ -56,12 +51,12 @@ public class BinaryTree<E> {
 
     }
 
-    static void preoderPrint_loop(TreeNode root) {
+    void preoderPrint_loop(TreeNode<E> root) {
 
         if (root == null)
             return;
 
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<TreeNode<E>> stack = new Stack<TreeNode<E>>();
         stack.push(root);
 
         while (!stack.isEmpty()) {
@@ -81,7 +76,7 @@ public class BinaryTree<E> {
     }
 
     // 中序遍历 4,6,8,10,12,14,16 根节点中间打印
-    static void inorderPrint(TreeNode root) {
+    void inorderPrint(TreeNode<E> root) {
 
         if (root == null)
             return;
@@ -92,12 +87,12 @@ public class BinaryTree<E> {
     }
 
     // 中序遍历 4,6,8,10,12,14,16 根节点中间打印
-    static void inorderPrint_loop(TreeNode root) {
+    void inorderPrint_loop(TreeNode<E> root) {
 
         if (root == null)
             return;
 
-        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode<E>> stack = new Stack<>();
 
         while (!stack.isEmpty() || root != null) {
             if (root != null) {
@@ -114,7 +109,7 @@ public class BinaryTree<E> {
     }
 
     // 后序遍历 4，8，6，12，16，14，10 根节点最后打印
-    static void postorderPrint(TreeNode root) {
+    void postorderPrint(TreeNode<E> root) {
         if (root == null)
             return;
         postorderPrint(root.left);
@@ -123,17 +118,17 @@ public class BinaryTree<E> {
 
     }
 
-    static void postorderPrint_loop(TreeNode root) {
+    void postorderPrint_loop(TreeNode<E> root) {
         if (root == null)
             return;
 
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        Stack<TreeNode> stack_print = new Stack<TreeNode>();
+        Stack<TreeNode<E>> stack = new Stack<TreeNode<E>>();
+        Stack<TreeNode<E>> stack_print = new Stack<TreeNode<E>>();
 
         stack.push(root);
 
         while (!stack.isEmpty()) {
-            
+
             root = stack.pop();
             stack_print.push(root);
 
@@ -153,14 +148,14 @@ public class BinaryTree<E> {
 
     }
 
-    static public void levelOrder(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
+    public void levelOrder(TreeNode<E> root) {
+        Queue<TreeNode<E>> queue = new LinkedList<TreeNode<E>>();
 
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-            
-            TreeNode node = queue.poll();
+
+            TreeNode<E> node = queue.poll();
 
             System.out.println(node.val);
 
@@ -173,31 +168,29 @@ public class BinaryTree<E> {
             }
 
         }
-        
 
     }
-
 
     public static void main(String[] args) {
 
         System.out.println("Start");
 
-        TreeNode node6 = new TreeNode(12, null, null);
-        TreeNode node7 = new TreeNode(16, null, null);
-        TreeNode node4 = new TreeNode(4, null, null);
-        TreeNode node5 = new TreeNode(8, null, null);
-        TreeNode node2 = new TreeNode(6, node4, node5);
-        TreeNode node3 = new TreeNode(14, node6, node7);
-        TreeNode node1 = new TreeNode(10, node2, node3);
+        // TreeNode<E> node6 = new TreeNode(12, null, null);
+        // TreeNode<E> node7 = new TreeNode(16, null, null);
+        // TreeNode<E> node4 = new TreeNode(4, null, null);
+        // TreeNode<E> node5 = new TreeNode(8, null, null);
+        // TreeNode<E> node2 = new TreeNode(6, node4, node5);
+        // TreeNode<E> node3 = new TreeNode(14, node6, node7);
+        // TreeNode<E> node1 = new TreeNode(10, node2, node3);
 
         // preoderPrint(node1);
         // preoderPrint_loop(node1);
         // inorderPrint(node1);
         // inorderPrint_loop(node1);
         // postorderPrint(node1);
-        levelOrder(node1);
+        // levelOrder(node1);
 
-        System.out.println("End");
+        // System.out.println("End");
 
     }
 

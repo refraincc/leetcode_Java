@@ -2,7 +2,9 @@ package Sort;
 
 import java.util.Arrays;
 
-import Sort.BubbleSort;
+import Sort.BubbleSort1;
+import Sort.BubbleSort2;
+import Sort.BubbleSort3;
 import Sort.Sort;
 import Tools.*;
 
@@ -12,11 +14,12 @@ public class SortMain {
 
     public static void main(String[] args) {
         
-        Integer[] array = Integers.random(20000, 0, 20000);
+        Integer[] array = Integers.random(10000, 0, 50000);
 
         testSorts(array, 
-                new BubbleSort()
-
+                new BubbleSort1(),
+                new BubbleSort2(),
+                new BubbleSort3()
         );
 
 

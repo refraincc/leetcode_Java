@@ -2,23 +2,23 @@ package Leetcode.BinaryTree;
 
 import java.util.*;
 
-
 import Resource.TreeNode;
 
-public class leetcode_226_invertTree {
-    
-    static public TreeNode invertTree(TreeNode<E> root) {
-        if (root == null) return root;
+public class leetcode_226_invertTree<E> {
 
+    public TreeNode<E> invertTree(TreeNode<E> root) {
+        if (root == null)
+            return root;
 
         return null;
 
     }
 
-    static public TreeNode preorderInvertTree(TreeNode root) {
-        if (root == null) return root;
+    public TreeNode<E> preorderInvertTree(TreeNode<E> root) {
+        if (root == null)
+            return root;
 
-        TreeNode tmp = root.left;
+        TreeNode<E> tmp = root.left;
         root.left = root.right;
         root.right = tmp;
 
@@ -28,14 +28,13 @@ public class leetcode_226_invertTree {
         return root;
     }
 
-
-    static public TreeNode inorderInvertTree(TreeNode root) {
-        if (root == null) return root;
-
+    public TreeNode<E> inorderInvertTree(TreeNode<E> root) {
+        if (root == null)
+            return root;
 
         invertTree(root.left);
 
-        TreeNode tmp = root.left;
+        TreeNode<E> tmp = root.left;
         root.left = root.right;
         root.right = tmp;
 
@@ -44,31 +43,32 @@ public class leetcode_226_invertTree {
         return root;
     }
 
-    static public TreeNode postorderInvertTree(TreeNode root) {
-        if (root == null) return root;
-
+    public TreeNode<E> postorderInvertTree(TreeNode<E> root) {
+        if (root == null)
+            return root;
 
         invertTree(root.left);
         invertTree(root.right);
 
-        TreeNode tmp = root.left;
+        TreeNode<E> tmp = root.left;
         root.left = root.right;
         root.right = tmp;
 
         return root;
     }
 
-    static public TreeNode levelInvertTree(TreeNode root) {
-        if (root == null) return root;
+    public TreeNode<E> levelInvertTree(TreeNode<E> root) {
+        if (root == null)
+            return root;
 
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<TreeNode<E>> queue = new LinkedList<TreeNode<E>>();
 
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-            
-            TreeNode node = queue.poll();
-            TreeNode temp = node.left;
+
+            TreeNode<E> node = queue.poll();
+            TreeNode<E> temp = node.left;
             node.left = node.right;
             node.right = temp;
 
@@ -84,9 +84,8 @@ public class leetcode_226_invertTree {
         return root;
     }
 
-
     public static void main(String[] args) {
-        
+
     }
 
 }
