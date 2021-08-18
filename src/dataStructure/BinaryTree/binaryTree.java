@@ -38,13 +38,13 @@ public class BinaryTree<E> {
         size = 0;
     }
 
-    public void preorder(Visitor visitor) {
+    public void preorder(Visitor<E> visitor) {
         
     }
 
 
     // 前序遍历 10,6,4,8,14,12,16 根节点最先打印
-    static void preoderPrint(TreeNode root) {
+    static void preoderPrint(TreeNode<E> root) {
 
         if (root == null)
             return;

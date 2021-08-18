@@ -7,7 +7,7 @@ import Resource.TreeNode;
 
 public class leetcode_226_invertTree {
     
-    static public TreeNode invertTree(TreeNode root) {
+    static public TreeNode invertTree(TreeNode<E> root) {
         if (root == null) return root;
 
 
